@@ -36,12 +36,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 
-      - name: Build discv4-crawl
-        if: steps.semantic.outputs.new_release_version != ''
-        run: make build
-        env:
-          VERSION: ${{ steps.semantic.outputs.new_release_version }}
-
       - name: Set up Docker Buildx
         if: steps.semantic.outputs.new_release_version != ''
         uses: docker/setup-buildx-action@v2
