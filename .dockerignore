@@ -1,3 +1,9 @@
 nodes.json
 enrtree-info.json
 all.json
+Dockerfile
+CHANGELOG.md
+README.md
+
+.git
+.github
